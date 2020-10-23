@@ -1,0 +1,16 @@
+# ==============================================================
+# = Authentication Server JWT
+# = PROFILO GITHUB
+# ==============================================================
+
+spring:
+  application:
+    name: config-server-github
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/UOrnaghiProj/config-server-prop.git
+          username: 
+          password: 
+          

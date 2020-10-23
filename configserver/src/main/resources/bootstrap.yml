@@ -1,0 +1,45 @@
+# ==============================================================
+# = Config server di base
+# ==============================================================
+
+server:
+  port: 8888
+  
+# ==============================================================
+# = Profilo attivo
+# ==============================================================
+
+spring:
+    profiles:
+     active: git
+     
+# ==============================================================
+# = ACTUATOR PARAMETERS
+# ==============================================================
+
+management:
+  endpoint:
+    health:
+      show-details: WHEN_AUTHORIZED
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+        
+# ==============================================================
+# = Proprietà Livello Log
+# = Default ERROR, WARN e INFO 
+# = Levels: TRACE, DEBUG, INFO, WARN, ERROR, FATAL, OFF
+# ============================================================== 
+
+logging:
+  level:
+    org.springframework.cloud: DEBUG
+    org.springframework.security: DEBUG
+
+# ==============================================================
+# = Parametri Sicurezza JWT 
+# ==============================================================
+sicurezza:
+    userpwd: 'password'
+    adminpwd: 'password'

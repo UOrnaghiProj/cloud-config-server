@@ -1,0 +1,13 @@
+# ==============================================================
+# = Authentication Server JWT
+# = PROFILO GIT
+# ==============================================================
+
+spring:
+  application:
+    name: config-server-git
+  cloud:
+    config:
+      server:
+        git:
+          uri: file:///home/umberto/Documents/workspace_00/git-server-repository
